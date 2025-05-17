@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Graphics Engine</title>
+
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"  rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="prism/prism.css" rel="stylesheet" />
+    <script src="prism/prism.js"></script>
+  </head>
+  
+  <body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <b class="navbar-brand user-select-none">Jay Russell</b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#techstack">Tech Stack</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#personalprojects">Personal Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-light py-5" id="about">
+      <div class="container text-center">
+        <h1 class="display-4 mb-4">Graphics Engine</h1>
+        <p class="lead mb-4">Lorem ipsum deolor</p>
+    
+        <div class="row justify-content-center g-4">
+    
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Languages Used</h5>
+                <div class="d-flex justify-content-center">
+                  <ul class="list-unstyled row g-2 mb-0 justify-content-center">
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-cplusplus-plain colored me-2 icon"></i> C++
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-opengl-plain colored me-2 icon"></i> GLSL
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Frameworks & Software</h5>
+                <div class="d-flex justify-content-center">
+                  <ul class="list-unstyled row g-2 mb-0 justify-content-center">
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-opengl-plain colored me-2 icon"></i> OpenGL
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-visualstudio-plain colored me-2 icon"></i> Visual Studio
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-github-original colored me-2 icon"></i> GitHub
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="devicon-git-plain colored me-2 icon"></i> Git
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="colored me-2 icon"></i> GLFW
+                    </li>
+                    <li class="col-6 d-flex align-items-center justify-content-center text-center">
+                      <i class="colored me-2 icon"></i> Glad
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Project Aims</h5>
+                  <div class="card-text text-start">
+                    <ul class="mb-0">
+                      <li>Learn and understand about OpenGL and the graphics rendering pipeline</li>
+                      <li>Implement a graphics rendering pipeline</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-12">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title">Check Source Code</h5>
+                <p>Explore the full source code on GitHub.</p>
+                <a href="https://github.com/rusjaell/graphics-engine" target="_blank" class="btn btn-primary mt-auto">View Source on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo / Preview -->
+    <section id="demo" class="pt-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Demo</h2>
+        <div class="row g-4 justify-content-center mb-4">
+
+          <div class="col-md-8">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <p>Watch the demo showcasing the graphics engine in action.</p>
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Graphics Engine Demo" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="alert alert-info" role="alert">
+          If you're interested in more in-depth specifics and personal notes, continue reading below.
+        </div>
+      </div>
+    </section>
+
+  <!-- Project Overview -->
+  <section id="overview" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Project Overview</h5>
+              <p class="card-text text-start">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- High Level Technical Overview -->
+<section id="technical" class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Graphics Pipeline Basics</h2>
+    <div class="row g-4">
+
+      <!-- Windowing -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Windowing</h5>
+            <p class="card-text">
+              Windowing is the process of creating and managing a window that displays graphics and receives input. It also supports event polling and buffer swapping, which are essential for handling window interactions and smoothly displaying rendered frames.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buffers -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Buffer Objects</h5>
+            <p class="card-text">
+              Buffers store data like vertices, colors, and indices on the GPU. They are essential for passing geometry and other information to shaders for rendering.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Draw Calls -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Draw Call</h5>
+            <p class="card-text">
+              A Draw Call is the process of issuing instructions to the GPU to render specific objects.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shaders -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Shaders</h5>
+            <p class="card-text">
+              Shaders are often small GPU programs that control how objects are drawn. They process vertex data and determine the final color and appearance of each pixel.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depth Testing -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Depth Testing</h5>
+            <p class="card-text">
+              Depth testing ensures that pixels closer to the camera are drawn over those farther away, maintaining proper object overlap and realistic 3D rendering.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Textures -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Textures</h5>
+            <p class="card-text">
+              Textures are images applied to 3D objects to add surface detail and color. They make objects look more realistic by giving them details and effects without adding extra geometry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Camera -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Camera</h5>
+            <p class="card-text">
+              The camera defines the viewer's perspective in a 3D scene. It controls the field of view, position, orientation, and how the scene is projected onto the screen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FrameBuffers -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">FrameBuffers</h5>
+            <p class="card-text">
+              Framebuffer's allow rendering to off-screen targets. They're used for post-processing effects, rendering textures, and are used in more advanced graphics pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passes -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Render Passes</h5>
+            <p class="card-text">
+              A render pass is a single step in the graphics pipeline where the scene is drawn or processed in a specific way. Usually multiple passes happen, each responsible for different tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Windowing -->
+<section id="windowing" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Windowing</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Main explanation card -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">What is Windowing?</h5>
+              <p class="card-text">
+                Windowing is the process of creating and managing an operating system window that serves as the surface for rendering graphics and receiving user input.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">System APIs</h5>
+              <p class="card-text">
+                It involves interacting with the OS's window manager through APIs like Win32, X11, Wayland, or Cocoa to create a window context with size, position, and pixel format.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Window Lifecycle</h5>
+              <p class="card-text">
+                The windowing system handles opening, resizing, minimizing, and closing the window, along with managing event queues for keyboard, mouse, and other input.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">GPU Integration</h5>
+              <p class="card-text">
+                Windowing provides a drawable surface, such as a <em>framebuffer</em> or <em>swapchain</em>, which the GPU renders into using APIs like <strong>OpenGL</strong>, <strong>Vulkan</strong>, or <strong>DirectX</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Buffer Swapping</h5>
+              <p class="card-text">
+                Buffer swapping swaps the back buffer (off-screen) with the front buffer (display) to present rendered frames smoothly and avoid flickering.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Event Handling</h5>
+              <p class="card-text">
+                Event polling and callbacks let applications respond asynchronously to user input and window state changes, essential for interactivity.
+              </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- Implementation examples section -->
+      <div class="col-md-12">
+        <h3 class="text-center mb-4">Windowing Implementation</h3>
+        <div class="row g-4">
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">GLFW</h5>
+                <p class="card-text">
+                  GLFW is a lightweight, open-source library that simplifies cross-platform window creation and input handling for OpenGL, Vulkan, and other graphics APIs. It abstracts platform-specific windowing APIs, this is perfect for my project.
+                  <span>Learn more at the <a href="https://www.glfw.org" target="_blank" rel="noopener noreferrer">GLFW official website</a></span>
+                </p>
+                <p class="card-text">
+                  Before using any meaningful GLFW functions the library must be initialized.
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glfw_init.cpp"></pre>
+                <p class="card-text">
+                  After initialization, window hints are set to specify the desired OpenGL version and profile. In this project decided on utilizing the latest versions, OpenGL version 4.6 with the core profile.
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glfw_window_hints.cpp"></pre>
+                <p class="card-text">
+                  Next is the window creation step. If successful, the returned pointer should not be a <code>nullptr</code>.
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glfw_window_creation.cpp"></pre>
+                <p class="card-text">
+                  After the window is created it has to be bound to the glfw context. this is something i forget and left me scratching my head for a short period of time.
+                </p>
+                <pre class="language-cpp"><code>glfwMakeContextCurrent(window);</code></pre>
+                
+                <p class="card-text">
+                  Full Code:
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glfw_window_code.cpp"></pre>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Main Loop</h5>
+                <p class="card-text">
+                  The main loop is a fundamental part of most graphical applications and games. It continuously runs while the window is open, repeatedly processing user input, updating the application state, and rendering graphics to the screen. Without this loop, the program would execute once and exit immediately, causing the window to close.
+                </p>
+          
+                <p class="card-text">
+                  In GLFW, this function should be called inside a while loop after setting the context as current. This keeps the window open instead of closing immediately, though there still requires a bit more before the window becomes fully functional.
+                </p>
+                <pre class="language-cpp"><code>while (!glfwWindowShouldClose(window))</code></pre>
+          
+                <p class="card-text">
+                  For the window to be responsive and function, both the buffers and poll events need to be called to allow events to be processed and rendering to the surface to begin.
+                </p>
+                <pre class="language-cpp"><code>glfwSwapBuffers(window);<br/>glfwPollEvents();</code></pre>
+                <p class="card-text">
+                  Full Code:
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glfw_main_loop.cpp"></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">GLAD</h5>
+                <p class="card-text">
+                  GLAD is a modern OpenGL loader library that dynamically retrieves the addresses of OpenGL functions supported by your graphics driver at runtime. This step is crucial because modern OpenGL functions are not accessible until they are loaded.
+                </p>
+          
+                <p class="card-text">
+                  Once you have made the GLFW context current, GLAD must be initialized to gain access to OpenGL functions.
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glad_load.cpp"></pre>
+                
+                <p class="card-text">
+                  With this boilerplate complete im able to call the following two OpenGL functions sets the window's background color to coral. The window is now fully prepared for rendering.
+                  If any errors occur during this process, they may indicate an unsupported OpenGL version or a problem with the graphics driver or context setup.
+                </p>
+                <pre class="language-cpp"><code>glClearColor(1.0f, 0.5f, 0.5f, 1.0f);<br/>glClear(GL_COLOR_BUFFER_BIT);</code></pre>
+                <p class="card-text">
+                  Complete Code Example:
+                </p>
+                <pre class="language-cpp" data-src="assets/graphics_engine/glad_full_code.cpp"></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Window Events</h5>
+                <p class="card-text">
+                  <p class="card-text">
+                    GLFW’s <code>glfwPollEvents()</code> function is what actually checks for and processes all pending window events. When called, it handles invoking the callback functions you have registered,before your main application logic runs. 
+                  </p>
+                  <div class="alert alert-info" role="alert">Examples will be shown further down in the Camera Section</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Buffers -->
+  <section id="buffers" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Buffer Objects</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Buffer Objects Overview</h5>
+              <p class="card-text">
+                Buffer objects are memory containers stored on the GPU, used to efficiently transfer large sets of data like vertices or indices from the CPU. They enable fast, reusable rendering workflows by avoiding per-frame data uploads.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Vertex Array Object</h5>
+              <p class="card-text">
+                A Vertex Array Object (VAO) stores the configuration for how vertex data is interpreted—such as attribute pointers and buffer bindings. It simplifies switching between different mesh layouts by encapsulating this setup.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Vertex Buffer Object</h5>
+              <p class="card-text">
+                A Vertex Buffer Object (VBO) holds vertex data like positions, colors, and normals in GPU memory. It’s the core data structure used to define the shape and appearance of 3D geometry for rendering.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Index/Element Buffer Object</h5>
+              <p class="card-text">
+                An Element Buffer Object (EBO), also known as an Index Buffer Object (IBO), stores indices that reference vertices in a VBO. This allows for efficient reuse of vertices when rendering shapes like triangles or quads.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Implementation examples section -->
+      <div class="col-md-12">
+        <h3 class="text-center mb-4">Buffer Objects Implementation</h3>
+        <div class="row g-4">
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Vertex Array</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Vertex Buffer Object</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Element Buffer Object</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Draw Calls -->
+  <section id="drawcalls" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Draw Calls</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Draw Call</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Issuing a Draw Call</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shaders -->
+  <section id="shaders" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Shaders</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Shader Overview</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Vertex Shader</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Fragment Shader</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Shader Abstraction</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Shader Uniforms</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Depth Testing -->
+  <section id="depthtesting" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Depth Testing</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Depth Testing Overview</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Depth Testing Modes</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Textures -->
+  <section id="textures" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Textures</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Texture Overview</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Texture Wrapping</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">UV Coordinates</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">MipMaps</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Camera -->
+  <section id="camera" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Camera</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Camera Overview</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Perspective Camera</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Orthograpic Camera</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">What are Matrices</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Projection Matrix</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">View Matrix</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Model Matrix</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Render Pass -->
+  <section id="renderpass" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Render Pass</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Render Pass Overview</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Lighting Pass</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Geometry Pass</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Shadow Pass</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Conclusion -->
+  <section id="conclusion" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Project Conclusion</h2>
+      <div class="row g-4">
+        
+        <p class="text-center mb-4">This project has been a great learning experience, strengthening my skills in OpenGL, shader programming, and modern C++ practices. Below are the things ive taken away from this project:</p>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Understanding OpenGL's state machine and how to correctly manage state changes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Debugging GLSL shaders and interpreting compilation errors.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Balancing between realism and performance when implementing PBR.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Learning the intricacies of framebuffers and render passes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Gaining proficiency with modern C++ standards and best practices.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas for Improvements -->
+  <section id="areasforimprovements" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Areas for Improvements</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Implement global illumination.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Add support for real-time ray tracing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Enhance material system with procedural textures.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Optimize performance for mobile devices.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">Create a user-friendly GUI for tweaking rendering parameters.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="mb-0">© 2025 Jay Russell. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+  <style>
+    .icon {
+      font-size: 2.5rem;
+    }
+    body {
+      padding-top: 56px;
+    }
+  </style>
+
+</html>
